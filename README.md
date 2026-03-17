@@ -26,6 +26,6 @@ This project demonstrates enterprise-grade cloud infrastructure design and deplo
 
 # Network Topology
 # Traffic Flow
-<pre> ```mermaid flowchart LR A[Administrator] --> B[Bastion Host] B --> C[Private Web Server] ``` </pre>
+<pre> ```text Administrator ↓ SSH to Bastion Host (Public Subnet) ↓ SSH to Web Application Instance (Private Subnet) ``` </pre>
 
 
