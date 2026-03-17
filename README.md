@@ -73,3 +73,21 @@ VPC, Subnets, ALB, ASG, CloudFront Created/Updated
 # Features
 ## Networking & Connectivity
    * Multi-AZ VPC Design: Spans 2 availability zones for fault tolerance
+   * Public/Private Subnet Segmentation: DMZ pattern for security isolation
+   * Internet Gateway: Managed route to the internet for public resources
+   * NAT Gateway: Secure outbound internet access for private instances
+   * VPC Gateway Endpoints: Direct S3 access bypassing NAT (cost optimization)
+
+## Load Balancing & Auto Scaling
+   * Application Load Balancer: Layer 7 load balancing across multiple AZs
+   * Target Groups: Health-checked instance registration
+   * Auto Scaling Groups: CPU-based scaling (2 min, 6 max instances)
+   * Launch Templates: Standardized instance configuration
+   * Self-Healing: Automatic replacement of unhealthy instances
+
+## Networking & Connectivity
+   * Multi-AZ VPC Design: Spans 2 availability zones for fault tolerance
+   * Public/Private Subnet Segmentation: DMZ pattern for security isolation
+   * Internet Gateway: Managed route to the internet for public resources
+   * NAT Gateway: Secure outbound internet access for private instances
+   * VPC Gateway Endpoints: Direct S3 access bypassing NAT (cost optimization)
