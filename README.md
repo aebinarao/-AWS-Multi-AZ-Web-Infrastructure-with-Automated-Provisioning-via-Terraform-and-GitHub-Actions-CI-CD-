@@ -55,12 +55,18 @@ S3 Bucket (via Gateway Endpoint) OR Internet (via NAT Gateway)
 
 </p>
 
-### Administrator Access Flow
+### Developer Deployment Flow
 <p>&nbsp;&nbsp;&nbsp;
-Administrator<br>
+Developer<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;↓<br>&nbsp;&nbsp;
-SSH to Bastion Host (Public Subnet)<br>
+Git Push to GitHub<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;↓<br>&nbsp;&nbsp;
-SSH to Web Application Instance (Private Subnet)
+GitHub Actions (CI/CD Pipeline)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;↓<br>&nbsp;&nbsp;
+Terraform Validation & Planning<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;↓<br>&nbsp;&nbsp;
+AWS API (Infrastructure Provisioning)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;↓<br>&nbsp;&nbsp;
+VPC, Subnets, ALB, ASG, CloudFront Created/Updated
 </p>
 
