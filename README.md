@@ -21,5 +21,5 @@ This project demonstrates enterprise-grade cloud infrastructure design and deplo
 
 # Architecture
 <p align="center">
-  <img src="/images/multi-tier.png" width="1000" />
+  <img src="/images/aws-vpc-project.png" width="1000" />
 </p>
