@@ -118,7 +118,7 @@ VPC, Subnets, ALB, ASG, CloudFront Created/Updated
    * Health Checks: ALB and ASG health monitoring
    * Access Logs: ALB request logging
 
-### Technology Stack
+# Technology Stack
 ## Cloud Provider
   * AWS - Amazon Web Services
 
