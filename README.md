@@ -18,3 +18,8 @@ Table of Contents
 
 # Overview
 This project demonstrates enterprise-grade cloud infrastructure design and deployment on AWS. It implements a highly available, auto-scaling web application architecture with global content delivery, following AWS Well-Architected Framework best practices.
+
+# Architecture
+<p align="center">
+  <img src="/images/Youngminds Multi-Tier VPC.drawio.png" width="1000" />
+</p>
