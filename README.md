@@ -25,7 +25,13 @@ This project demonstrates enterprise-grade cloud infrastructure design and deplo
 </p>
 
 # Network Topology
-# Traffic Flowsadas
-<pre> ```text id="flow1" Administrator ↓ SSH to Bastion Host (Public Subnet) ↓ SSH to Web Application Instance (Private Subnet) ``` </pre>
+# Traffic Flow
+```text
+Administrator
+    ↓
+SSH to Bastion Host (Public Subnet)
+    ↓
+SSH to Web Application Instance (Private Subnet)
+```
 
 
