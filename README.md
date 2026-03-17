@@ -43,12 +43,15 @@ CloudFront (Global CDN - Edge Caching)<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;↓<br>&nbsp;&nbsp;
 Application Load Balancer (Multi-AZ)<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;↓<br>&nbsp;&nbsp;
-Application Load Balancer (Multi-AZ)<br>
+Target Group (Health Checked)
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;↓<br>&nbsp;&nbsp;
-Application Load Balancer (Multi-AZ)<br>
+Auto Scaling Group (2-6 instances)
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;↓<br>&nbsp;&nbsp;
-Application Load Balancer (Multi-AZ)<br>
+Web Application Instances (Private Subnets)
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;↓<br>&nbsp;&nbsp;
+S3 Bucket (via Gateway Endpoint) OR Internet (via NAT Gateway)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;↓<br>&nbsp;&nbsp;
+
 
 </p>
 
