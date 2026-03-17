@@ -35,3 +35,29 @@ SSH to Bastion Host (Public Subnet)<br>
 SSH to Web Application Instance (Private Subnet)
 </p>
 
+### End User Request Flow
+<p>&nbsp;&nbsp;&nbsp;
+End User<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;↓<br>&nbsp;&nbsp;
+CloudFront (Global CDN - Edge Caching)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;↓<br>&nbsp;&nbsp;
+Application Load Balancer (Multi-AZ)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;↓<br>&nbsp;&nbsp;
+Application Load Balancer (Multi-AZ)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;↓<br>&nbsp;&nbsp;
+Application Load Balancer (Multi-AZ)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;↓<br>&nbsp;&nbsp;
+Application Load Balancer (Multi-AZ)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;↓<br>&nbsp;&nbsp;
+
+</p>
+
+### Administrator Access Flow
+<p>&nbsp;&nbsp;&nbsp;
+Administrator<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;↓<br>&nbsp;&nbsp;
+SSH to Bastion Host (Public Subnet)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;↓<br>&nbsp;&nbsp;
+SSH to Web Application Instance (Private Subnet)
+</p>
+
