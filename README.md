@@ -72,4 +72,4 @@ VPC, Subnets, ALB, ASG, CloudFront Created/Updated
 
 # Features
 ## Networking & Connectivity
-   *Multi-AZ VPC Design: Spans 2 availability zones for fault tolerance
+   * Multi-AZ VPC Design: Spans 2 availability zones for fault tolerance
