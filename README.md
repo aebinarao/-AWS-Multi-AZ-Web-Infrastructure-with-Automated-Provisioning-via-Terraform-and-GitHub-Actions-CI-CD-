@@ -2,7 +2,7 @@
 A production-ready, multi-AZ AWS infrastructure for hosting a static website, provisioned entirely with Terraform and automated via GitHub Actions CI/CD. Features CloudFront CDN, ALB load balancing, Auto Scaling, Bastion Hosts, S3 static asset delivery, and CloudWatch monitoring across two availability zones.
 
 
-Table of Contents
+# Table of Contents
 * Overview
 * Architecture
 * Features
