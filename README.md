@@ -26,6 +26,6 @@ This project demonstrates enterprise-grade cloud infrastructure design and deplo
 
 # Network Topology
 # Traffic Flow
-End User → CloudFront (Global CDN - Edge Caching) → Application Load Balancer (Multi-AZ) → Target Group (Health Checked) → Auto Scaling Group (2-6 instances) → Web Application Instances (Private Subnets) → S3 Bucket (via Gateway Endpoint) OR Internet (via NAT Gateway)
+<pre> ```mermaid flowchart LR A[Administrator] --> B[Bastion Host] B --> C[Private Web Server] ``` </pre>
 
 
