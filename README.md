@@ -21,5 +21,5 @@ This project demonstrates enterprise-grade cloud infrastructure design and deplo
 
 # Architecture
 <p align="center">
-  <img src="/images/Youngminds Multi-Tier VPC.drawio.png" width="1000" />
+  <img src="/images/multi-tier.png" width="1000" />
 </p>
