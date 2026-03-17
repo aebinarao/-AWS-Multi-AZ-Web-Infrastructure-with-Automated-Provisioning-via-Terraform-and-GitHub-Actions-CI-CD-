@@ -4,19 +4,15 @@ A production-ready, multi-AZ AWS infrastructure for hosting a static website, pr
 
 Table of Contents
 * Overview
-Architecture
-Features
-Technology Stack
-Prerequisites
-Getting Started
-Deployment
-Testing
-Cost Analysis
-Security
-Monitoring
-Troubleshooting
-Project Evolution
-Future Enhancements
-Contributing
-License
-Acknowledgments
+* Architecture
+* Features
+* Technology Stack
+* Prerequisites
+* Getting Started
+* Deployment
+* Testing
+* Cost Analysis
+* Security
+* Monitoring
+* Troubleshooting
+
