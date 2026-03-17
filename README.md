@@ -16,5 +16,5 @@ Table of Contents
 * Monitoring
 * Troubleshooting
 
-#  Overview
+# Overview
 - This project demonstrates enterprise-grade cloud infrastructure design and deployment on AWS. It implements a highly available, auto-scaling web application architecture with global content delivery, following AWS Well-Architected Framework best practices.
