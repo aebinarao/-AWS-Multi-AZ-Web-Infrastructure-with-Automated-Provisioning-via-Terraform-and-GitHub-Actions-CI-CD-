@@ -25,7 +25,8 @@ This project demonstrates enterprise-grade cloud infrastructure design and deplo
 </p>
 
 # Network Topology
-# Traffic Flow
+## Traffic Flow
+### Administrator Access Flow
 <p>
 Administrator<br>
 &nbsp;&nbsp;&nbsp;&nbsp;↓<br>
