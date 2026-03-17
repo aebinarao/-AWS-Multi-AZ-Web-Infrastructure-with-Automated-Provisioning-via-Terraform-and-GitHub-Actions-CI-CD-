@@ -70,3 +70,6 @@ AWS API (Infrastructure Provisioning)<br>
 VPC, Subnets, ALB, ASG, CloudFront Created/Updated
 </p>
 
+# Features
+## Networking & Connectivity
+   *Multi-AZ VPC Design: Spans 2 availability zones for fault tolerance
