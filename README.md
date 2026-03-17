@@ -1,2 +1,22 @@
 # AWS-Multi-AZ-Web-Infrastructure-with-Automated-Provisioning-via-Terraform-and-GitHub-Actions-CI-CD-
 A production-ready, multi-AZ AWS infrastructure for hosting a static website, provisioned entirely with Terraform and automated via GitHub Actions CI/CD. Features CloudFront CDN, ALB load balancing, Auto Scaling, Bastion Hosts, S3 static asset delivery, and CloudWatch monitoring across two availability zones.
+
+
+Table of Contents
+* Overview
+Architecture
+Features
+Technology Stack
+Prerequisites
+Getting Started
+Deployment
+Testing
+Cost Analysis
+Security
+Monitoring
+Troubleshooting
+Project Evolution
+Future Enhancements
+Contributing
+License
+Acknowledgments
