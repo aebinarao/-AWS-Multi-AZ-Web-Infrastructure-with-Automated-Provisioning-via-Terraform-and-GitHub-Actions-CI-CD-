@@ -118,6 +118,31 @@ VPC, Subnets, ALB, ASG, CloudFront Created/Updated
    * Health Checks: ALB and ASG health monitoring
    * Access Logs: ALB request logging
 
+### Technology Stack
+## Cloud Provider
+  * AWS - Amazon Web Services
+
+## Infrastructure as Code
+  * Terraform
+  * HashiCorp Configuration Language
+
+## CI/CD 
+  * GitHub Actions
+  * GitHub for version control
+
+## AWS Services
+  * VPC - Virtual Private Cloud
+  * EC2 - Elastic Compute Cloud 
+  * ALB - Application Load Balancer
+  * ASG - Auto Scaling Groups
+  * CloudFront - Content Delivery Network
+  * S3 - Simple Storage Service
+  * IAM - Identity and Access Management
+  * CloudWatch - Monitoring and Logging
+  * VPC Endpoints - Gateway Endpoints for S3
+
+## Operating System
+  * Amazon Linux 2023 - Latest AWS-optimized Linux distribution
 
 
 
