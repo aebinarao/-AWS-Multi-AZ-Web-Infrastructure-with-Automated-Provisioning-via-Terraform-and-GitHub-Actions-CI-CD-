@@ -26,7 +26,7 @@ This project demonstrates enterprise-grade cloud infrastructure design and deplo
 
 # Network Topology
 # Traffic Flow
-<p align="center">
+<p>
 Administrator<br>
 ↓<br>
 SSH to Bastion Host (Public Subnet)<br>
