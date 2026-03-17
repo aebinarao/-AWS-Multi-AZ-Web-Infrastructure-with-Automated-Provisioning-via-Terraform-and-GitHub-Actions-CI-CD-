@@ -23,3 +23,19 @@ This project demonstrates enterprise-grade cloud infrastructure design and deplo
 <p align="center">
   <img src="/images/aws-vpc-project.png" width="1000" />
 </p>
+
+# Network Topology
+# Traffic Flow
+End User
+    ↓
+CloudFront (Global CDN - Edge Caching)
+    ↓
+Application Load Balancer (Multi-AZ)
+    ↓
+Target Group (Health Checked)
+    ↓
+Auto Scaling Group (2-6 instances)
+    ↓
+Web Application Instances (Private Subnets)
+    ↓
+S3 Bucket (via Gateway Endpoint) OR Internet (via NAT Gateway)
