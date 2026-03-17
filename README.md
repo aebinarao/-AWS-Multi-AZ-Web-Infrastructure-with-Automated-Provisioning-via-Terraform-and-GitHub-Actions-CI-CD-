@@ -29,9 +29,9 @@ This project demonstrates enterprise-grade cloud infrastructure design and deplo
 ### Administrator Access Flow
 <p>&nbsp;&nbsp;&nbsp;
 Administrator<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;↓<br>;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;↓<br>&nbsp;&nbsp;
 SSH to Bastion Host (Public Subnet)<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;↓<br>;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;↓<br>&nbsp;&nbsp;
 SSH to Web Application Instance (Private Subnet)
 </p>
 
