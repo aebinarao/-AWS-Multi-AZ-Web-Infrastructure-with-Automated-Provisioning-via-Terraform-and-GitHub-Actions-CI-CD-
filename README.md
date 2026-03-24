@@ -212,8 +212,16 @@ VPC, Subnets, ALB, ASG, CloudFront Created/Updated
   * No hardcoded credentials in your GitHub repo or Terraform files
   * .gitignore should exclude terraform.tfstate, .tfvars, and any *.pem files
 
+## Logging & Auditability
+  * VPC Flow Logs enabled (captures all network traffic metadata)
+  * S3 access logging enabled
+  * CloudWatch alarms for suspicious activity (e.g., repeated SSH failures)
+
 
 # Cost Analysis
+
+## Compute (EC2 — Bastion Hosts + Web App + Auto Scaling)
+#### 2 Bastion Hosts (one per AZ — AZ-1A and AZ-1C)
 
 | Component | Est. Monthly Cost |
 |---|---|
