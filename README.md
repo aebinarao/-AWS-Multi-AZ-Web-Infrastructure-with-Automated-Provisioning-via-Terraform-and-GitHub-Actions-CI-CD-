@@ -167,14 +167,12 @@ VPC, Subnets, ALB, ASG, CloudFront Created/Updated
 ## Network Security
 <table>
   <tr>
-    <th>Destination</th>
-    <th>Target</th>
-    <th>Purpose</th>
+    <th>Traffic</th>
+    <th>Expected Result</th>
   </tr>
    <tr>
-    <td>10.0.0.0/16</td>
-    <td>local</td>
-    <td>Internal VPC traffic</td>
+    <td>Internet → Bastion (port 22)</td>
+    <td>✅ Allowed</td>
   </tr>
 </table>
 
