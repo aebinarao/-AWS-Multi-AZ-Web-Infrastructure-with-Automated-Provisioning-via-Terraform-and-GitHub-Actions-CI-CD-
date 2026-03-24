@@ -164,6 +164,19 @@ VPC, Subnets, ALB, ASG, CloudFront Created/Updated
   * Test that only authorized branches trigger production deploy
 
 ### Security Testing Phase
+## Network Security
+<table>
+  <tr>
+    <th>Destination</th>
+    <th>Target</th>
+    <th>Purpose</th>
+  </tr>
+   <tr>
+    <td>10.0.0.0/16</td>
+    <td>local</td>
+    <td>Internal VPC traffic</td>
+  </tr>
+</table>
 
 ## Cost Analysis
 
