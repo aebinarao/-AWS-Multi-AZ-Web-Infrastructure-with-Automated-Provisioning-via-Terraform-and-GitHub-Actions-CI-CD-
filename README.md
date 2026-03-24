@@ -220,7 +220,33 @@ VPC, Subnets, ALB, ASG, CloudFront Created/Updated
 
 # Cost Analysis
 
-## Compute (EC2 — Bastion Hosts + Web App + Auto Scaling)
+## 1.) Compute (EC2 — Bastion Hosts + Web App + Auto Scaling)
+  * 2 Bastion Hosts (one per AZ — AZ-1A and AZ-1C)
+  * Web App instances in private subnets (managed by ASG)
+<table>
+  <tr>
+    <th>Resource</th>
+    <th>Instance Type (Recommended)</th>
+    <th>Est. Monthly Cost</th>
+  </tr>
+   <tr>
+    <td>Bastion Host × 2</td>
+    <td>t2.micro</td>
+    <td>~$8–$8.70</td>
+  </tr>
+  <tr>
+    <td>Web App (ASG min 2)</td>
+    <td>t2.micro</td>
+    <td>~$8.50 - $12.00</td>
+  </tr>
+  <tr>
+    <td>Total Compute</td>
+    <td></td>
+    <td>~$16.50 - $20.70</td>
+  </tr>
+</table>
+
+## 2.) Networking
   * 2 Bastion Hosts (one per AZ — AZ-1A and AZ-1C)
   * Web App instances in private subnets (managed by ASG)
 <table>
