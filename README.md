@@ -144,5 +144,40 @@ VPC, Subnets, ALB, ASG, CloudFront Created/Updated
 ## Operating System
   * Amazon Linux 2023 - Latest AWS-optimized Linux distribution
 
+# Testing
+### Connectivity & Network Tests
+  * Internet → IGW → CloudFront → ALB ✅ reachable
+  * ALB → Web App in private subnet ✅ reachable
+  * Web App → S3 via Gateway Endpoint ✅ (no NAT used)
+  * SSH to Bastion Host (public subnet) ✅ works
+  * SSH from Bastion → Web App (private subnet) ✅ works
+  * Direct SSH to Web App from internet ❌ should be blocked
+
+### Auto Scaling & Resilience Tests
+  * Terminate one Web App instance → ASG should launch a replacement
+  * ALB health check should remove unhealthy targets automatically
+  * Simulate AZ-1A failure → traffic should continue via AZ-1C
+
+### CI/CD Pipeline Tests
+  * Push a bad Terraform config → pipeline should fail before apply
+  * Verify no secrets/tokens appear in GitHub Actions logs
+  * Test that only authorized branches trigger production deploy
+
+### Security Testing Phase
+
+## Cost Analysis
+
+| Component | Est. Monthly Cost |
+|---|---|
+| EC2 (Bastion + Web App ASG) | ~$38–$77 |
+| Networking (NAT GW + ALB + CloudFront) | ~$85–$135 |
+| S3 Storage | ~$1–$2 |
+| CloudWatch Observability | ~$3–$13 |
+| **Estimated Total** | **~$127–$227/mo** |
+
+> Cost optimizations applied: S3 Gateway Endpoint (avoids NAT charges for S3),
+> CloudFront for edge caching, Auto Scaling to right-size compute demand.
+  
+
 
 
