@@ -247,31 +247,141 @@ VPC, Subnets, ALB, ASG, CloudFront Created/Updated
 </table>
 
 ## 2.) Networking
-  * 2 Bastion Hosts (one per AZ — AZ-1A and AZ-1C)
-  * Web App instances in private subnets (managed by ASG)
 <table>
   <tr>
     <th>Resource</th>
-    <th>Instance Type (Recommended)</th>
+    <th>Cost Basis</th>
     <th>Est. Monthly Cost</th>
   </tr>
    <tr>
-    <td>Bastion Host × 2</td>
-    <td>t2.micro</td>
-    <td>~$8–$8.70</td>
+    <td>Internet Gateway</td>
+    <td>Free (you pay for data transfer)</td>
+    <td>~$0</td>
   </tr>
   <tr>
-    <td>Web App (ASG min 2)</td>
-    <td>t2.micro</td>
-    <td>~$8.50 - $12.00</td>
+    <td>NAT Gateway × 2 (one per AZ)</td>
+    <td>~$0.045/hr + $0.045/GB</td>
+    <td>~$65–$90</td>
   </tr>
   <tr>
-    <td>Total Compute</td>
+    <td>ALB</td>
+    <td>~$0.008/LCU-hr + $0.018/hr</td>
+    <td>~$20–$35</td>
+  </tr>
+  <tr>
+    <td>CloudFront</td>
+    <td>First 1TB free, then ~$0.0085/GB</td>
+    <td>~$0–$10</td>
+  </tr>
+  <tr>
+    <td>Data Transfer Out</td>
+    <td>~$0.09/GB after 100GB free</td>
+    <td>Varies</td>
+  </tr>
+  <tr>
+    <td>Total Networking</td>
     <td></td>
-    <td>~$16.50 - $20.70</td>
+    <td>~$85–$135/mo</td>
   </tr>
 </table>
 
+## 3. Storage (S3)
+<table>
+  <tr>
+    <th>Resource</th>
+    <th>Cost Basis</th>
+    <th>Est. Monthly Cost</th>
+  </tr>
+   <tr>
+    <td>S3 Storage</td>
+    <td>$0.023/GB (first 50GB)</td>
+    <td>~$0.01–$1</td>
+  </tr>
+  <tr>
+    <td>S3 Requests</td>
+    <td>$0.0004 per 1,000 GET</td>
+    <td>~$0.01–$1</td>
+  </tr>
+  <tr>
+    <td>S3 Gateway Endpoint</td>
+    <td>Free</td>
+    <td>$0</td>
+  </tr>
+  <tr>
+    <td>Total S3</td>
+    <td></td>
+    <td>~$1–$2/mo</td>
+  </tr>
+</table>
+
+## 4.) Observability (CloudWatch)
+
+<table>
+  <tr>
+    <th>Resource</th>
+    <th>Cost Basis</th>
+    <th>Est. Monthly Cost</th>
+  </tr>
+   <tr>
+    <td>CloudWatch Logs ingestion</td>
+    <td>$0.50/GB</td>
+    <td>~$1–$5</td>
+  </tr>
+  <tr>
+    <td>CloudWatch Metrics</td>
+    <td>First 10 metrics free</td>
+    <td>~$0–$3</td>
+  </tr>
+  <tr>
+    <td>CloudWatch Alarms</td>
+    <td>$0.10/alarm/month</td>
+    <td>~$1–$2</td>
+  </tr>
+  <tr>
+    <td>VPC Flow Logs</td>
+    <td>Charged as CloudWatch Logs</td>
+    <td>~$1–$3</td>
+  </tr>
+  <tr>
+    <td>Total Observability</td>
+    <td></td>
+    <td>~$3–$13/mo</td>
+  </tr>
+</table>
+
+## 5.) Total Estimated Monthly Cost
+<table>
+  <tr>
+    <th>Category</th>
+    <th>Low Estimate</th>
+    <th>High Estimate</th>
+  </tr>
+   <tr>
+    <td>Compute (EC2 + ASG)</td>
+    <td>$16.50</td>
+    <td>$20.70</td>
+  </tr>
+  <tr>
+    <td>Networking (NAT + ALB + CF)</td>
+    <td>$85</td>
+    <td>$135</td>
+  </tr>
+  <tr>
+    <td>Storage (S3)</td>
+    <td>$1</td>
+    <td>$2</td>
+  </tr>
+  <tr>
+    <td>Observability (CloudWatch)</td>
+    <td>$3</td>
+    <td>$13</td>
+  </tr>
+  <tr>
+    <td>Total</td>
+    <td>~$105.50/mo</td>
+    <td>~$170.70/m</td>
+  </tr>
+</table>
 
 | Component | Est. Monthly Cost |
 |---|---|
