@@ -163,7 +163,7 @@ VPC, Subnets, ALB, ASG, CloudFront Created/Updated
   * Verify no secrets/tokens appear in GitHub Actions logs
   * Test that only authorized branches trigger production deploy
 
-### Security Testing Phase
+# Security Testing Phase
 ## Network Security
 <table>
   <tr>
@@ -174,9 +174,46 @@ VPC, Subnets, ALB, ASG, CloudFront Created/Updated
     <td>Internet → Bastion (port 22)</td>
     <td>✅ Allowed</td>
   </tr>
+  <tr>
+    <td>Internet → Web App directly (port 22)</td>
+    <td>❌ Blocked</td>
+  </tr>
+  <tr>
+    <td>Internet → ALB (port 80/443)</td>
+    <td>✅ Allowed</td>
+  </tr>
+  <tr>
+    <td>ALB → Web App (app port)</td>
+    <td>✅ Allowed</td>
+  </tr>
+  <tr>
+    <td>Web App → S3 (via Gateway Endpoint)</td>
+    <td>✅ Allowed, no Internet</td>
+  </tr>
+  <tr>
+    <td>Any → Web App (direct, no Bastion)</td>
+    <td>❌ Blocked</td>
+  </tr>
 </table>
 
-## Cost Analysis
+## S3 Bucket Security
+  * Block Public Access enabled ✅
+  * Access only via S3 Gateway Endpoint from private subnet (no public internet path)
+  * Bucket policy restricts access to your VPC/endpoint only
+  * Versioning enabled (good practice to mention)
+  * Server-side encryption (SSE-S3 or SSE-KMS)
+
+## Data in Transit
+  * CloudFront should enforce HTTPS only (redirect HTTP → HTTPS)
+  * ALB should have an SSL/TLS certificate (ACM)
+  * SSH sessions to Bastion use key pairs, not passwords
+
+## Secrets & Credentials Management
+  * No hardcoded credentials in your GitHub repo or Terraform files
+  * .gitignore should exclude terraform.tfstate, .tfvars, and any *.pem files
+
+
+# Cost Analysis
 
 | Component | Est. Monthly Cost |
 |---|---|
