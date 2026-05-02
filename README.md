@@ -12,9 +12,7 @@ A production-ready, multi-AZ AWS infrastructure for hosting a static website, pr
 * Deployment
 * Testing
 * Cost Analysis
-* Security
-* Monitoring
-* Troubleshooting
+
 
 # Overview
 This project demonstrates enterprise-grade cloud infrastructure design and deployment on AWS. It implements a highly available, auto-scaling web application architecture with global content delivery, following AWS Well-Architected Framework best practices.
